@@ -1,0 +1,17 @@
+{
+  "name": "own-portfolio",
+  "version": "1.0.0",
+  "description": "Premium personal brand website for **Rupanjali Kumari**.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "puppeteer": "^24.43.1",
+    "sharp": "^0.33.5"
+  }
+}

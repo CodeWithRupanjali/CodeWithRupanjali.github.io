@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rupanjali Kumari — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Source Sans 3", Calibri, "Segoe UI", Arial, sans-serif;
+      font-size: 9.9pt;
+      line-height: 1.4;
+      color: #1a2330;
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 10mm 13mm 7mm;
+      background: #fff;
+    }
+
+    a {
+      color: #0b5cad;
+      text-decoration: none;
+    }
+
+    /* Header — balanced photo + text */
+    .header {
+      display: grid;
+      grid-template-columns: 28mm 1fr;
+      column-gap: 11px;
+      align-items: center;
+      border-bottom: 2.5px solid #0b5cad;
+      padding-bottom: 10px;
+      margin-bottom: 13px;
+    }
+
+    /* Medium square — clear face, not oversized */
+    .photo-frame {
+      width: 28mm;
+      height: 28mm;
+      overflow: hidden;
+      border-radius: 3px;
+      border: 1.4px solid #0b5cad;
+      background: #06101c;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .photo-frame img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+      transform: none;
+    }
+
+    .header-main {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3px;
+    }
+
+    h1 {
+      font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+      font-size: 21pt;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: #0a1628;
+      line-height: 1.12;
+      text-transform: uppercase;
+    }
+
+    .title {
+      font-family: "Source Sans 3", Calibri, sans-serif;
+      font-size: 10.6pt;
+      color: #0b5cad;
+      font-weight: 600;
+      letter-spacing: 0.15px;
+      line-height: 1.3;
+    }
+
+    .contact {
+      margin-top: 4px;
+      font-size: 8.9pt;
+      color: #334155;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2px 0;
+      line-height: 1.45;
+    }
+
+    .contact span {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .contact .sep {
+      margin: 0 7px;
+      color: #0b5cad;
+      font-weight: 700;
+    }
+
+    section {
+      margin-bottom: 11px;
+    }
+
+    h2 {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 10.7pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.95px;
+      color: #0a1628;
+      border-bottom: 1.4px solid #b7cde3;
+      padding-bottom: 3px;
+      margin-bottom: 6px;
+    }
+
+    .summary,
+    .project li {
+      font-family: "Source Sans 3", Calibri, sans-serif;
+      font-size: 9.4pt;
+      font-weight: 400;
+      color: #243041;
+      line-height: 1.48;
+    }
+
+    .summary {
+      text-align: justify;
+    }
+
+    .skills-grid {
+      display: grid;
+      gap: 4px;
+    }
+
+    .skill-row {
+      display: grid;
+      grid-template-columns: 34mm 1fr;
+      column-gap: 8px;
+      align-items: baseline;
+    }
+
+    .skill-label {
+      font-weight: 700;
+      color: #0a1628;
+      font-size: 9.4pt;
+    }
+
+    .skill-list {
+      color: #243041;
+      font-size: 9.5pt;
+      line-height: 1.4;
+    }
+
+    .project {
+      margin-bottom: 10px;
+    }
+
+    .project:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      column-gap: 10px;
+      align-items: baseline;
+    }
+
+    .project-name {
+      font-family: "Source Sans 3", Calibri, sans-serif;
+      font-weight: 700;
+      font-size: 10pt;
+      color: #0a1628;
+      letter-spacing: 0.1px;
+    }
+
+    .project-tech {
+      font-weight: 500;
+      font-size: 8.9pt;
+      color: #4b5b6e;
+    }
+
+    .project-links {
+      font-size: 8.3pt;
+      color: #0b5cad;
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    ul {
+      margin-left: 14px;
+      margin-top: 3px;
+    }
+
+    .project li {
+      margin-bottom: 2px;
+    }
+
+    .certs li {
+      margin-bottom: 0;
+    }
+
+    .edu-block {
+      margin-bottom: 7px;
+    }
+
+    .edu-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      column-gap: 10px;
+      align-items: baseline;
+      font-weight: 700;
+      font-size: 10pt;
+      color: #0a1628;
+    }
+
+    .edu-meta {
+      font-size: 9.2pt;
+      color: #334155;
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+
+    .certs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 14px;
+      row-gap: 3px;
+      list-style: none;
+      margin: 0;
+    }
+
+    .certs li {
+      margin: 0;
+      padding-left: 11px;
+      position: relative;
+      font-size: 8.95pt;
+      line-height: 1.45;
+    }
+
+    .certs li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #0b5cad;
+      font-weight: 700;
+    }
+
+    .certs strong {
+      font-weight: 700;
+      color: #0a1628;
+    }
+
+    .provider {
+      color: #556476;
+      font-weight: 400;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page {
+        width: 210mm;
+        min-height: auto;
+        height: auto;
+        padding: 10mm 13mm 7mm;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="photo-frame">
+        <img src="profile-resume.jpg?v=new" alt="Rupanjali Kumari" />
+      </div>
+      <div class="header-main">
+        <h1>Rupanjali Kumari</h1>
+        <p class="title">Software Developer | AI Enthusiast | Full-Stack &amp; UI</p>
+        <div class="contact">
+          <span>Rohtas, Bihar, India</span><span class="sep">|</span>
+          <span><a href="mailto:rupanjalikumari264@gmail.com">rupanjalikumari264@gmail.com</a></span><span class="sep">|</span>
+          <span><a href="https://github.com/CodeWithRupanjali">github.com/CodeWithRupanjali</a></span><span class="sep">|</span>
+          <span><a href="https://linkedin.com/in/codewithrupanjali">linkedin.com/in/codewithrupanjali</a></span>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p class="summary">
+        Computer Science learner and aspiring Software Engineer with hands-on experience building and deploying
+        live web applications. Strong in JavaScript, HTML/CSS, responsive UI, and privacy-first client-side AI.
+        Shipped 4 live projects and 8 certifications. Seeking internships and entry-level roles in web development.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <div class="skill-label">Languages</div>
+          <div class="skill-list">JavaScript, Java, Python</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Web Technologies</div>
+          <div class="skill-list">HTML5, CSS3, DOM Manipulation, Web APIs, Responsive Design, MediaDevices API</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">CS Fundamentals</div>
+          <div class="skill-list">Data Structures, Algorithms, Problem Solving, Programming Logic</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">AI &amp; Emerging Tech</div>
+          <div class="skill-list">Browser-based AI APIs, Machine Learning Basics, Data Acquisition, Prompt Engineering</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Tools &amp; Platforms</div>
+          <div class="skill-list">Git, GitHub, VS Code, GitHub Pages, Vercel, SEO Basics</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Soft Skills</div>
+          <div class="skill-list">Communication, Teamwork, Critical Thinking, Adaptability, Time Management</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+
+      <article class="project">
+        <div class="project-head">
+          <span class="project-name">VisionIQ — AI-Powered Face Analyzer <span class="project-tech">| HTML5, CSS3, JavaScript, Face Detection AI</span></span>
+          <span class="project-links">
+            <a href="https://codewithrupanjali.github.io/VisionIQ/">Live</a> |
+            <a href="https://github.com/CodeWithRupanjali/VisionIQ">GitHub</a>
+          </span>
+        </div>
+        <ul>
+          <li>Shipped a live face-analysis product where all AI runs in the browser — no backend, no data uploads, full user privacy.</li>
+          <li>Built real-time emotion, age, and gender detection with webcam streaming, dual-face comparison, and mood filters.</li>
+          <li>Optimized on-device inference and UI for smooth performance across modern browsers and screen sizes.</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <span class="project-name">CodeSphere — Complete CS Knowledge Hub <span class="project-tech">| HTML5, CSS3, JavaScript, Vercel</span></span>
+          <span class="project-links">
+            <a href="https://codesphere-hub.vercel.app/">Live</a> |
+            <a href="https://github.com/CodeWithRupanjali/-CodeSphere">GitHub</a>
+          </span>
+        </div>
+        <ul>
+          <li>Built an end-to-end free CS learning platform covering languages, domains, roadmaps, and career paths in one hub.</li>
+          <li>Designed interactive try-it editors, quizzes, glossary, and client-side XP/badge progress without login or paywalls.</li>
+          <li>Deployed on Vercel with a clear beginner-to-advanced structure so learners can navigate topics quickly.</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <span class="project-name">ShopEasy — E-Commerce Front-End Demo <span class="project-tech">| HTML5, CSS3, JavaScript</span></span>
+          <span class="project-links">
+            <a href="https://codewithrupanjali.github.io/Shopeasy/">Live</a> |
+            <a href="https://github.com/CodeWithRupanjali/Shopeasy">GitHub</a>
+          </span>
+        </div>
+        <ul>
+          <li>Built a shopping demo with product catalog, live search, category filters, and real-time cart in vanilla JS.</li>
+          <li>Delivered a clean responsive UI from mobile to desktop without frameworks.</li>
+          <li>Handled cart state and product filtering entirely on the client for a fast, install-free demo experience.</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <span class="project-name">Sugar &amp; Slate Patisserie — Client-Style Website <span class="project-tech">| HTML5, CSS3, JavaScript, Vercel, SEO</span></span>
+          <span class="project-links">
+            <a href="https://sugar-slate-patisserie.vercel.app/">Live</a> |
+            <a href="https://github.com/CodeWithRupanjali/sugar-slate-patisserie">GitHub</a>
+          </span>
+        </div>
+        <ul>
+          <li>Delivered a premium bakery brand website with gallery, menu, and celebration cake sections.</li>
+          <li>Deployed on Vercel with SEO meta tags and social sharing setup for production hosting.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="edu-block">
+        <div class="edu-head">
+          <span>Diploma in Computer Science Engineering (Polytechnic)</span>
+          <span>Expected: 2028</span>
+        </div>
+        <p class="edu-meta">Kashi Institute of Technology, Varanasi | 3-Year Diploma | 2nd Year</p>
+      </div>
+      <div class="edu-block">
+        <div class="edu-head">
+          <span>Class XII</span>
+          <span>Passing Year: 2026</span>
+        </div>
+        <p class="edu-meta">UMSH Lohande | 74.9%</p>
+      </div>
+      <div class="edu-block">
+        <div class="edu-head">
+          <span>Class X</span>
+          <span>Passing Year: 2024</span>
+        </div>
+        <p class="edu-meta">UMSH School Lohande | 69%</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <ul class="certs">
+        <li><strong>TCS iON Career Edge: Young Professional</strong> <span class="provider">— TCS</span></li>
+        <li><strong>Introduction to Front-End Development</strong> <span class="provider">— Coursera</span></li>
+        <li><strong>Google AI Professional Certificate</strong> <span class="provider">— Google</span></li>
+        <li><strong>IBM AI Fundamentals: SkillsBuild</strong> <span class="provider">— IBM</span></li>
+        <li><strong>Microsoft Azure AI Fundamentals (AI-900 Prep)</strong> <span class="provider">— Microsoft</span></li>
+        <li><strong>Meta Social Media Marketing Certificate</strong> <span class="provider">— Meta</span></li>
+        <li><strong>Acquiring Data (Level 1) — AI ASCEND</strong> <span class="provider">— FutureSkills Prime</span></li>
+        <li><strong>Techkriti 2.0 Recognition</strong> <span class="provider">— Technical Festival</span></li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

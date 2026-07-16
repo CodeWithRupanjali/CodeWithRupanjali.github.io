@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rupanjali Kumari — CodeWithRupanjali. Computer Science learner & aspiring Software Engineer. Premium portfolio featuring live projects, certifications, and a clear engineering journey." />
+  <meta name="author" content="Rupanjali Kumari" />
+  <meta name="theme-color" content="#03060d" />
+  <meta property="og:title" content="Rupanjali Kumari | CodeWithRupanjali" />
+  <meta property="og:description" content="Premium personal brand portfolio — Software Development, AI, Full-Stack & UI." />
+  <meta property="og:image" content="logo.jpg" />
+  <meta property="og:type" content="website" />
+  <title>Rupanjali Kumari | CodeWithRupanjali</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alkalami&family=Inter:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <noscript>
+    <style>
+      .reveal { opacity: 1 !important; transform: none !important; filter: none !important; }
+    </style>
+  </noscript>
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"><span></span></div>
+
+  <canvas id="particles" aria-hidden="true" hidden></canvas>
+
+  <!-- NAV -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner container">
+      <a href="#home" class="nav-brand">
+        <img src="logo.jpg" alt="CodeWithRupanjali" class="nav-logo" width="40" height="40" />
+        <span>CodeWithRupanjali</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#vision">Vision</a>
+        <a href="#education">Education</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-mobile-cta">Let's Connect</a>
+      </nav>
+      <a href="#contact" class="btn btn-primary nav-cta">Let's Connect</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero section">
+      <div class="hero-ambient" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-radial"></div>
+        <span class="orb orb-a"></span>
+        <span class="orb orb-b"></span>
+        <span class="orb orb-c"></span>
+        <span class="hero-particle p1"></span>
+        <span class="hero-particle p2"></span>
+        <span class="hero-particle p3"></span>
+        <span class="hero-particle p4"></span>
+        <span class="hero-particle p5"></span>
+        <span class="hero-particle p6"></span>
+      </div>
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <p class="status-line reveal fade-up">
+            <span class="status-dot" aria-hidden="true"></span>
+            Open to Opportunities &amp; Collaboration
+          </p>
+          <p class="hero-kicker reveal fade-up" style="--delay:40ms">Personal Brand</p>
+          <p class="hero-brand reveal fade-up" style="--delay:70ms">CODEWITHRUPANJALI</p>
+          <p class="hero-hello reveal fade-up" style="--delay:90ms">Hello, I’m</p>
+          <h1 class="hero-name reveal fade-up" style="--delay:110ms">
+            <span class="name-first">RUPANJALI</span>
+            <span class="name-last">KUMARI</span>
+          </h1>
+          <p class="role-line reveal fade-up" style="--delay:150ms" aria-live="polite">
+            <span class="sr-only">SOFTWARE DEVELOPER, AI ENTHUSIAST, PROGRAMMER, FULL-STACK &amp; UI</span>
+            <span class="typed-role" id="typedRole">SOFTWARE DEVELOPER</span><span class="typed-cursor" aria-hidden="true"></span>
+          </p>
+          <div class="hero-actions reveal fade-up" style="--delay:200ms">
+            <a href="#projects" class="btn btn-primary btn-shine">View Projects</a>
+            <a href="Rupanjali_Kumari_Resume.pdf" class="btn btn-outline btn-shine" id="resumeBtn" target="_blank" rel="noopener noreferrer">View Resume</a>
+          </div>
+          <div class="hero-social reveal fade-up" style="--delay:250ms">
+            <a href="https://linkedin.com/in/codewithrupanjali" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com/CodeWithRupanjali" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="mailto:rupanjalikumari264@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-aside reveal fade-up" style="--delay:120ms">
+          <div class="hero-portrait-stage" id="heroPortraitStage">
+            <div class="portrait-glow" aria-hidden="true"></div>
+            <div class="portrait-wrap">
+              <img
+                src="hero-portrait.png?v=bottom"
+                alt="Rupanjali Kumari — professional portrait"
+                class="hero-portrait"
+                width="913"
+                height="1024"
+                decoding="async"
+                fetchpriority="high"
+              />
+              <div class="portrait-fade" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true"><span></span></div>
+    </section>
+
+    <div class="hero-tech-marquee" aria-hidden="true">
+      <div class="marquee-track tech-track">
+        <span>JAVA</span><span>•</span><span>HTML</span><span>•</span><span>CSS</span><span>•</span><span>JAVASCRIPT</span><span>•</span><span>REACT</span><span>•</span><span>GITHUB</span><span>•</span><span>AI</span><span>•</span><span>DSA</span><span>•</span><span>APIs</span><span>•</span><span>JAVA</span><span>•</span>
+        <span>JAVA</span><span>•</span><span>HTML</span><span>•</span><span>CSS</span><span>•</span><span>JAVASCRIPT</span><span>•</span><span>REACT</span><span>•</span><span>GITHUB</span><span>•</span><span>AI</span><span>•</span><span>DSA</span><span>•</span><span>APIs</span><span>•</span><span>JAVA</span><span>•</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <p class="section-label reveal fade-up">About</p>
+        <h2 class="section-title reveal fade-up">About Me</h2>
+        <div class="about-grid">
+          <div class="about-copy">
+            <article class="about-block reveal fade-up">
+              <h3>The Origin</h3>
+              <p>I am Rupanjali Kumari — a Computer Science learner with a deep curiosity for how technology works and a genuine desire to use it to create meaningful experiences. My journey into software development began from a personal fascination: a few lines of code could produce something that thousands of people interact with every day.</p>
+            </article>
+            <article class="about-block reveal fade-up" style="--delay:55ms">
+              <h3>The Craft</h3>
+              <p>I find joy in writing code that solves real problems — whether understanding how an algorithm works under the hood, building an interactive web interface, or exploring how AI can analyze expressions directly in the browser. I believe great software is never just functional; it is thoughtful, accessible, and built with the end user in mind.</p>
+            </article>
+            <article class="about-block reveal fade-up" style="--delay:110ms">
+              <h3>The Quiet Ambition</h3>
+              <p>To become a skilled Software Engineer who builds products that are technically excellent and genuinely useful — technology that creates real impact for real people. I approach learning the same way I approach building: with patience, structure, and a bias toward action. I build, break things, understand why they broke, and build better the next time.</p>
+            </article>
+            <p class="location-line reveal fade-up" style="--delay:165ms">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Rohtas, Bihar, India
+            </p>
+          </div>
+          <div class="about-cards">
+            <div class="card about-card reveal fade-up">
+              <span class="card-icon" aria-hidden="true">◎</span>
+              <h4>The Purpose</h4>
+              <p>Build impactful software that creates genuine value. Every product should feel intuitive, purposeful, and worth someone's time.</p>
+            </div>
+            <div class="card about-card reveal fade-up" style="--delay:55ms">
+              <span class="card-icon" aria-hidden="true">◈</span>
+              <h4>Focus Areas</h4>
+              <p>Web development, programming fundamentals, data structures, algorithms, and the intersection of AI with practical browser-based applications.</p>
+            </div>
+            <div class="card about-card reveal fade-up" style="--delay:110ms">
+              <span class="card-icon" aria-hidden="true">◆</span>
+              <h4>Growth Mindset</h4>
+              <p>Every certification earned, project shipped, and bug fixed is progress. I measure growth by how much more capable I am today than yesterday.</p>
+            </div>
+            <div class="card about-card reveal fade-up" style="--delay:165ms">
+              <span class="card-icon" aria-hidden="true">◇</span>
+              <h4>Collaboration</h4>
+              <p>I thrive where ideas are shared openly, feedback is constructive, and everyone moves toward a common goal. Good software is almost always a team sport.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTERS -->
+    <section id="achievements" class="section">
+      <div class="container counters-grid">
+        <div class="card counter-item reveal scale-in" data-target="8" data-suffix="+">
+          <span class="counter-num">0</span>
+          <span class="counter-label">Professional Certifications</span>
+        </div>
+        <div class="card counter-item reveal scale-in" style="--delay:55ms" data-target="4" data-suffix="">
+          <span class="counter-num">0</span>
+          <span class="counter-label">Projects Built</span>
+        </div>
+        <div class="card counter-item reveal scale-in" style="--delay:110ms" data-static="CS">
+          <span class="counter-num">CS</span>
+          <span class="counter-label">Computer Science Learner</span>
+        </div>
+        <div class="card counter-item reveal scale-in" style="--delay:165ms" data-static="∞">
+          <span class="counter-num">∞</span>
+          <span class="counter-label">Continuous Skill Development</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="premium-marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>CodeWithRupanjali</span><span>·</span><span>Software Developer</span><span>·</span><span>AI Enthusiast</span><span>·</span><span>Full-Stack &amp; UI</span><span>·</span><span>Build</span><span>·</span><span>Ship</span><span>·</span><span>Learn</span><span>·</span>
+        <span>CodeWithRupanjali</span><span>·</span><span>Software Developer</span><span>·</span><span>AI Enthusiast</span><span>·</span><span>Full-Stack &amp; UI</span><span>·</span><span>Build</span><span>·</span><span>Ship</span><span>·</span><span>Learn</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- JOURNEY -->
+    <section id="journey" class="section section-alt">
+      <div class="container">
+        <p class="section-label reveal fade-up">Path</p>
+        <h2 class="section-title reveal fade-up">My Journey</h2>
+        <p class="section-desc reveal fade-up">Six chapters from first curiosity to shipping real products.</p>
+        <div class="timeline">
+          <div class="timeline-item reveal slide-left">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-card">
+              <span class="chapter">Chapter 01</span>
+              <h3>The Spark: Discovering Code</h3>
+              <p>My first encounter with programming was through C — seeing that a simple set of instructions could make a computer do exactly what I wanted was fascinating. That curiosity never left.</p>
+            </div>
+          </div>
+          <div class="timeline-item right reveal slide-right">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-card">
+              <span class="chapter">Chapter 02</span>
+              <h3>Building the Foundation: Computer Science</h3>
+              <p>Diving deep into CS fundamentals: data structures, algorithms, programming logic, and problem-solving. These mental models inform every project I work on today.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal slide-left">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-card">
+              <span class="chapter">Chapter 03</span>
+              <h3>Going Live on the Web: Frontend Development</h3>
+              <p>Completing the Coursera Front-End certification opened a new dimension — building things that live on the web, respond to users, and look great on any screen. HTML, CSS, and JavaScript became my creative tools.</p>
+            </div>
+          </div>
+          <div class="timeline-item right reveal slide-right">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-card">
+              <span class="chapter">Chapter 04</span>
+              <h3>Earning Credentials: Professional Certifications</h3>
+              <p>Earning certifications from TCS, Coursera, Google, IBM, Microsoft, Meta, FutureSkills &amp; Accenture. Each represented a deliberate learning goal — not just a badge to collect.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal slide-left">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-card">
+              <span class="chapter">Chapter 05</span>
+              <h3>Shipping Real Products: Four Projects Live</h3>
+              <p>Designed and deployed VisionIQ, ShopEasy, Sugar &amp; Slate Patisserie, and CodeSphere — four real, live projects each solving a different problem. Taking ideas from concept to deployment taught me more than any course ever could.</p>
+            </div>
+          </div>
+          <div class="timeline-item right reveal slide-right">
+            <div class="timeline-dot"></div>
+            <div class="card timeline-card">
+              <span class="chapter">Chapter 06</span>
+              <h3>Now: Growing Every Day</h3>
+              <p>Continuing to level up — exploring advanced JavaScript, Python, React, and AI integration. More projects, more certifications, more impact ahead.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNOLOGIES -->
+    <section id="tech" class="section">
+      <div class="container">
+        <p class="section-label reveal fade-up">Stack</p>
+        <h2 class="section-title reveal fade-up">Technologies I Work With</h2>
+        <div class="tech-grid">
+          <div class="tech-pill reveal fade-up"><span>⚡</span><strong>C</strong><em>Core Language</em></div>
+          <div class="tech-pill reveal fade-up" style="--delay:40ms"><span>🐍</span><strong>Python</strong><em>Learning</em></div>
+          <div class="tech-pill reveal fade-up" style="--delay:80ms"><span>JS</span><strong>JavaScript</strong><em>Primary</em></div>
+          <div class="tech-pill reveal fade-up" style="--delay:120ms"><span>☕</span><strong>Java</strong><em>Certified</em></div>
+          <div class="tech-pill reveal fade-up" style="--delay:160ms"><span>⬚</span><strong>HTML5</strong><em>Proficient</em></div>
+          <div class="tech-pill reveal fade-up" style="--delay:200ms"><span>◈</span><strong>CSS3</strong><em>Proficient</em></div>
+          <div class="tech-pill reveal fade-up" style="--delay:240ms"><span>📱</span><strong>Responsive</strong><em>Applied</em></div>
+          <div class="tech-pill reveal fade-up" style="--delay:280ms"><span>◎</span><strong>AI APIs</strong><em>Exploring</em></div>
+          <div class="tech-pill reveal fade-up" style="--delay:320ms"><span>⎇</span><strong>Git</strong><em>Daily Use</em></div>
+          <div class="tech-pill reveal fade-up" style="--delay:360ms"><span>⌘</span><strong>GitHub</strong><em>Active</em></div>
+          <div class="tech-pill reveal fade-up" style="--delay:400ms"><span>✎</span><strong>VS Code</strong><em>Main Editor</em></div>
+          <div class="tech-pill reveal fade-up" style="--delay:440ms"><span>△</span><strong>Algorithms</strong><em>Studying</em></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <p class="section-label reveal fade-up">Expertise</p>
+        <h2 class="section-title reveal fade-up">Technical Skills</h2>
+        <div class="skills-grid">
+          <article class="card skill-card reveal fade-up">
+            <h3>Programming Languages</h3>
+            <p>Languages I use to express logic, solve problems, and build functionality. My foundation started with C and I continue expanding across multiple paradigms.</p>
+            <div class="tags">
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="" width="16" height="16" />C</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" width="16" height="16" />Python</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="16" height="16" />JavaScript</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="" width="16" height="16" />Java</span>
+            </div>
+          </article>
+          <article class="card skill-card reveal fade-up" style="--delay:55ms">
+            <h3>Web Technologies</h3>
+            <p>My primary creative domain. I build interfaces that are visually clean, fully responsive, and accessible across all screen sizes — mobile-first to large desktop.</p>
+            <div class="tags">
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" width="16" height="16" />HTML5</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" width="16" height="16" />CSS3</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="16" height="16" />JavaScript</span>
+              <span class="skill-tag">Responsive Design</span>
+              <span class="skill-tag">DOM</span>
+              <span class="skill-tag">Web APIs</span>
+            </div>
+          </article>
+          <article class="card skill-card reveal fade-up" style="--delay:110ms">
+            <h3>CS Fundamentals</h3>
+            <p>The mental models that make better engineers. Understanding data structures and algorithms changes how I think about every problem I face.</p>
+            <div class="tags">
+              <span class="skill-tag">Data Structures</span>
+              <span class="skill-tag">Algorithms</span>
+              <span class="skill-tag">Problem Solving</span>
+              <span class="skill-tag">Programming Logic</span>
+            </div>
+          </article>
+          <article class="card skill-card reveal fade-up" style="--delay:165ms">
+            <h3>Tools &amp; Platforms</h3>
+            <p>Tools I use to manage code, collaborate with others, and build efficiently. Git and GitHub are part of my daily workflow on every project.</p>
+            <div class="tags">
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" width="16" height="16" />Git</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" width="16" height="16" />GitHub</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="" width="16" height="16" />VS Code</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" width="16" height="16" />GitHub Pages</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" alt="" width="16" height="16" />Vercel</span>
+            </div>
+          </article>
+          <article class="card skill-card reveal fade-up" style="--delay:220ms">
+            <h3>Soft Skills</h3>
+            <p>Technical skill alone does not build great software. Communication, collaboration, and clear thinking are equally essential.</p>
+            <div class="tags">
+              <span class="skill-tag">Communication</span>
+              <span class="skill-tag">Teamwork</span>
+              <span class="skill-tag">Critical Thinking</span>
+              <span class="skill-tag">Adaptability</span>
+              <span class="skill-tag">Time Management</span>
+            </div>
+          </article>
+          <article class="card skill-card reveal fade-up" style="--delay:275ms">
+            <h3>Artificial Intelligence</h3>
+            <p>An area I actively explore through certifications and hands-on application. From AI APIs to data acquisition fundamentals, I am building working knowledge of AI in practical software.</p>
+            <div class="tags">
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" alt="" width="16" height="16" />AI APIs</span>
+              <span class="skill-tag">Data Acquisition</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" width="16" height="16" />ML Basics</span>
+              <span class="skill-tag">Browser AI</span>
+              <span class="skill-tag">Prompt Engineering</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <p class="section-label reveal fade-up">Credentials</p>
+        <h2 class="section-title reveal fade-up">Certifications</h2>
+        <p class="section-desc reveal fade-up">Eight professional credentials — each tied to a deliberate learning goal.</p>
+        <div class="cert-grid">
+          <article class="card cert-card reveal fade-up">
+            <span class="cert-badge">TCS</span>
+            <h3>TCS iON Career Edge: Young Professional</h3>
+            <p class="cert-provider">Tata Consultancy Services (TCS)</p>
+            <p>A comprehensive professional readiness program by TCS that bridges academic learning and modern workplace expectations — covering communication, presentation, and professional conduct.</p>
+            <div class="tags"><span>Communication</span><span>Presentation</span><span>Business Etiquette</span><span>Career Readiness</span></div>
+            <ul class="takeaways">
+              <li>Structured professional communication in workplace contexts</li>
+              <li>Delivering clear and confident presentations to diverse audiences</li>
+              <li>Understanding business etiquette and corporate conduct standards</li>
+            </ul>
+          </article>
+          <article class="card cert-card reveal fade-up" style="--delay:55ms">
+            <span class="cert-badge">Coursera</span>
+            <h3>Introduction to Front-End Development</h3>
+            <p class="cert-provider">Coursera</p>
+            <p>A structured introduction to modern front-end web development covering HTML, CSS, and JavaScript — establishing a solid foundation for building responsive, accessible web interfaces.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span></div>
+            <ul class="takeaways">
+              <li>Building semantic, accessible HTML structures from scratch</li>
+              <li>Applying CSS layouts and responsive design principles</li>
+              <li>Implementing JavaScript interactivity on real web pages</li>
+            </ul>
+          </article>
+          <article class="card cert-card reveal fade-up" style="--delay:80ms">
+            <span class="cert-badge">Google</span>
+            <h3>Google AI Professional Certificate</h3>
+            <p class="cert-provider">Google (via Coursera)</p>
+            <p>A professional-level certification from Google covering the foundations of artificial intelligence, machine learning concepts, and how AI systems are designed and deployed in real-world applications.</p>
+            <div class="tags"><span>AI</span><span>Machine Learning</span><span>AI Systems</span><span>Google Tools</span></div>
+            <ul class="takeaways">
+              <li>Understanding core AI and ML concepts from an industry leader</li>
+              <li>Applying Google's AI frameworks and tools to practical problems</li>
+              <li>Building a strong foundation for AI-integrated software development</li>
+            </ul>
+          </article>
+          <article class="card cert-card reveal fade-up" style="--delay:110ms">
+            <span class="cert-badge">IBM</span>
+            <h3>IBM AI Fundamentals: SkillsBuild</h3>
+            <p class="cert-provider">IBM</p>
+            <p>IBM's foundational AI certification covering artificial intelligence concepts, machine learning basics, and the practical application of AI tools — delivered through IBM's SkillsBuild platform.</p>
+            <div class="tags"><span>AI</span><span>ML</span><span>IBM Watson</span><span>Data Fundamentals</span></div>
+            <ul class="takeaways">
+              <li>Grasping AI and ML fundamentals from a global technology leader</li>
+              <li>Exploring IBM's enterprise AI tools and their practical use cases</li>
+              <li>Building confidence in AI literacy for modern software engineering</li>
+            </ul>
+          </article>
+          <article class="card cert-card reveal fade-up" style="--delay:140ms">
+            <span class="cert-badge">Microsoft</span>
+            <h3>Microsoft Azure AI Fundamentals (AI-900 Prep)</h3>
+            <p class="cert-provider">Microsoft</p>
+            <p>Microsoft's AI-900 preparation certification covering Azure AI services, machine learning workloads, and responsible AI principles — a globally recognized credential in the AI space.</p>
+            <div class="tags"><span>Azure AI</span><span>ML Workloads</span><span>Responsible AI</span><span>AI-900</span></div>
+            <ul class="takeaways">
+              <li>Understanding Microsoft Azure's AI and cognitive services ecosystem</li>
+              <li>Learning responsible AI principles and ethical AI deployment</li>
+              <li>Preparing for one of the most recognized AI certifications globally</li>
+            </ul>
+          </article>
+          <article class="card cert-card reveal fade-up" style="--delay:170ms">
+            <span class="cert-badge">Meta</span>
+            <h3>Meta Social Media Marketing Professional Certificate</h3>
+            <p class="cert-provider">Meta (via Coursera)</p>
+            <p>Meta's professional certificate covering social media marketing strategy, content creation, advertising fundamentals, and analytics — useful for building a digital presence and understanding modern marketing.</p>
+            <div class="tags"><span>Social Strategy</span><span>Content</span><span>Meta Ads</span><span>Analytics</span></div>
+            <ul class="takeaways">
+              <li>Building and executing social media marketing strategies</li>
+              <li>Understanding Meta's advertising ecosystem and campaign management</li>
+              <li>Applying analytics to measure and improve digital marketing performance</li>
+            </ul>
+          </article>
+          <article class="card cert-card reveal fade-up" style="--delay:200ms">
+            <span class="cert-badge">Accenture</span>
+            <h3>Acquiring Data (Level 1) — AI ASCEND</h3>
+            <p class="cert-provider">FutureSkills Prime &amp; Accenture</p>
+            <p>Part of the AI ASCEND program — this Level 1 certification introduces the foundational concepts of AI, starting with how data is acquired, processed, and used to build intelligent systems.</p>
+            <div class="tags"><span>AI</span><span>Data Acquisition</span><span>ML Basics</span><span>Data Processing</span></div>
+            <ul class="takeaways">
+              <li>Understanding how data is sourced and prepared for AI systems</li>
+              <li>Grasping the relationship between data quality and model performance</li>
+              <li>Applying foundational AI thinking to practical problem scenarios</li>
+            </ul>
+          </article>
+          <article class="card cert-card reveal fade-up" style="--delay:230ms">
+            <span class="cert-badge">Techkriti</span>
+            <h3>Techkriti 2.0 Recognition</h3>
+            <p class="cert-provider">Technical Festival — Official Recognition</p>
+            <p>Recognized for active participation, teamwork, and meaningful contribution to technical activities and innovation-focused initiatives at Techkriti 2.0 — reflecting collaborative spirit and community engagement.</p>
+            <div class="tags"><span>Participation</span><span>Teamwork</span><span>Collaboration</span><span>Innovation</span></div>
+            <ul class="takeaways">
+              <li>Contributing positively within a collaborative technical environment</li>
+              <li>Demonstrating commitment to innovation and learning beyond coursework</li>
+              <li>Building professional presence through active technical participation</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <p class="section-label reveal fade-up">Work</p>
+        <h2 class="section-title reveal fade-up">Featured Projects</h2>
+        <p class="section-desc reveal fade-up">Four live products — from privacy-first AI to a full CS learning hub.</p>
+
+        <!-- VisionIQ -->
+        <article class="card project-card reveal fade-up">
+          <div class="project-head">
+            <div>
+              <span class="live-badge">LIVE</span>
+              <h3>VisionIQ: AI-Powered Face Analyzer</h3>
+            </div>
+            <div class="project-links">
+              <a href="https://codewithrupanjali.github.io/VisionIQ/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Live Demo</a>
+              <a href="https://github.com/CodeWithRupanjali/VisionIQ" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+            </div>
+          </div>
+          <p>VisionIQ is a 100% on-device AI-powered web application that analyzes facial expressions, age, and gender in real time directly through the browser. No uploads, no servers, no data ever leaves the user's device — privacy by design.</p>
+          <ul class="feature-list">
+            <li>Real-time emotion detection via webcam</li>
+            <li>Age and gender prediction using client-side AI models</li>
+            <li>Compare two faces simultaneously</li>
+            <li>Mood avatar with multiple visual filter styles</li>
+            <li>Live mood trend tracking &amp; session summary</li>
+            <li>Photo upload mode · Zero server involvement</li>
+          </ul>
+          <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Face Detection AI</span><span>MediaDevices API</span><span>GitHub Pages</span></div>
+          <div class="project-tabs" role="tablist">
+            <button type="button" class="tab-btn active" data-tab="overview">Overview</button>
+            <button type="button" class="tab-btn" data-tab="problem">Problem</button>
+            <button type="button" class="tab-btn" data-tab="solution">Solution</button>
+            <button type="button" class="tab-btn" data-tab="challenges">Challenges</button>
+            <button type="button" class="tab-btn" data-tab="learnings">Learnings</button>
+          </div>
+          <div class="tab-panels">
+            <div class="tab-panel active" data-panel="overview"><p>VisionIQ uses browser-compatible AI models to detect emotions, predict age and gender in real time through the webcam. All inference runs client-side — no video data ever leaves the device. Session-level mood tracking and a summary feature make it both a technical demonstration and a useful self-reflection tool.</p></div>
+            <div class="tab-panel" data-panel="problem"><p>Most AI facial recognition tools require server uploads, creating privacy risks. There was no lightweight, privacy-first tool for real-time browser-based facial analysis with session context and mood history.</p></div>
+            <div class="tab-panel" data-panel="solution"><p>Integrated client-side AI models via the browser's MediaDevices API. All processing happens in-tab. Added mood avatar filters, dual-face comparison, and session analytics for a richer experience beyond basic detection.</p></div>
+            <div class="tab-panel" data-panel="challenges"><p>Managing AI model loading without UI blocking. Handling cross-browser camera permission flows. Maintaining smooth real-time inference on lower-spec devices. Synchronizing multiple detection streams cleanly.</p></div>
+            <div class="tab-panel" data-panel="learnings"><p>Client-side AI integration requires careful async architecture. Privacy-first design is better UX — users engage more openly when data stays local. Post-launch polish takes as long as the initial build.</p></div>
+          </div>
+        </article>
+
+        <!-- ShopEasy -->
+        <article class="card project-card reveal fade-up" style="--delay:55ms">
+          <div class="project-head">
+            <div>
+              <span class="live-badge">LIVE</span>
+              <h3>ShopEasy: Premium E-Commerce Demo</h3>
+            </div>
+            <div class="project-links">
+              <a href="https://codewithrupanjali.github.io/Shopeasy/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Live Demo</a>
+              <a href="https://github.com/CodeWithRupanjali/Shopeasy" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+            </div>
+          </div>
+          <p>ShopEasy is a fully responsive, feature-complete e-commerce demo website built to showcase front-end development, UI/UX design, and AI-assisted development skills. It demonstrates that a clean, modern shopping experience can be designed, coded, and shipped end-to-end by a solo developer.</p>
+          <ul class="feature-list">
+            <li>12+ demo products across 6 categories</li>
+            <li>Real-time cart — add, remove, update quantities</li>
+            <li>Live product search with instant filtering</li>
+            <li>Category-based filtering · Responsive layout</li>
+            <li>Smooth animations and premium UI</li>
+            <li>Built with AI-assisted development workflow</li>
+          </ul>
+          <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>AI-Assisted Workflow</span><span>GitHub Pages</span></div>
+          <div class="project-tabs" role="tablist">
+            <button type="button" class="tab-btn active" data-tab="overview">Overview</button>
+            <button type="button" class="tab-btn" data-tab="problem">Problem</button>
+            <button type="button" class="tab-btn" data-tab="solution">Solution</button>
+            <button type="button" class="tab-btn" data-tab="challenges">Challenges</button>
+            <button type="button" class="tab-btn" data-tab="learnings">Learnings</button>
+          </div>
+          <div class="tab-panels">
+            <div class="tab-panel active" data-panel="overview"><p>ShopEasy demonstrates end-to-end front-end engineering — product catalog, real-time cart logic, search and filter systems, and responsive layout — all built in vanilla HTML, CSS, and JavaScript without any frameworks.</p></div>
+            <div class="tab-panel" data-panel="problem"><p>Most e-commerce demos rely on frameworks and pre-built components. The challenge was to build a complete, premium shopping experience using only fundamentals — proving core front-end competency.</p></div>
+            <div class="tab-panel" data-panel="solution"><p>Built every feature from scratch — custom cart state management, live search logic, category filtering, and responsive grid layout — using only vanilla JavaScript and modern CSS.</p></div>
+            <div class="tab-panel" data-panel="challenges"><p>Managing cart state across product interactions without a framework. Building a search system that filters in real time without lag. Creating a layout that works from 320px mobile to 1440px desktop.</p></div>
+            <div class="tab-panel" data-panel="learnings"><p>Vanilla JavaScript is powerful enough to build production-quality UIs. State management without libraries requires clear architecture. AI-assisted workflows accelerate solo development without compromising code quality.</p></div>
+          </div>
+        </article>
+
+        <!-- Sugar & Slate -->
+        <article class="card project-card reveal fade-up" style="--delay:80ms">
+          <div class="project-head">
+            <div>
+              <span class="live-badge">LIVE</span>
+              <h3>Sugar &amp; Slate Patisserie: Client Website</h3>
+            </div>
+            <div class="project-links">
+              <a href="https://sugar-slate-patisserie.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Live Demo</a>
+              <a href="https://github.com/CodeWithRupanjali/sugar-slate-patisserie" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+            </div>
+          </div>
+          <p>Sugar &amp; Slate Patisserie is a premium client-style website for an artisan bakery and custom cake design studio based in Mirzamurad, Varanasi. It showcases handcrafted Indian-inspired cakes, mithai fusion desserts, and French patisserie — demonstrating real-world client website development skills.</p>
+          <ul class="feature-list">
+            <li>Premium brand identity for a luxury bakery</li>
+            <li>Custom cake gallery and menu showcase</li>
+            <li>Wedding and celebration cake catalog</li>
+            <li>Fully responsive and mobile-optimized</li>
+            <li>Deployed on Vercel · SEO &amp; Open Graph</li>
+            <li>Real client-style deliverable</li>
+          </ul>
+          <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Vercel</span><span>SEO</span></div>
+          <div class="project-tabs" role="tablist">
+            <button type="button" class="tab-btn active" data-tab="overview">Overview</button>
+            <button type="button" class="tab-btn" data-tab="problem">Problem</button>
+            <button type="button" class="tab-btn" data-tab="solution">Solution</button>
+            <button type="button" class="tab-btn" data-tab="challenges">Challenges</button>
+            <button type="button" class="tab-btn" data-tab="learnings">Learnings</button>
+          </div>
+          <div class="tab-panels">
+            <div class="tab-panel active" data-panel="overview"><p>A full client-style website for a premium artisan bakery in Varanasi. The project required building a brand experience — not just a webpage — that communicates luxury, craftsmanship, and trust.</p></div>
+            <div class="tab-panel" data-panel="problem"><p>Local artisan businesses in India often lack professional digital presence. The challenge was to build a website that feels as premium as the products being sold.</p></div>
+            <div class="tab-panel" data-panel="solution"><p>Designed a premium visual identity with rich typography, structured menu sections, and a Vercel-deployed production environment with proper SEO meta tags and social sharing setup.</p></div>
+            <div class="tab-panel" data-panel="challenges"><p>Translating a physical luxury brand into a digital experience. Balancing Indian cultural aesthetic with modern web design. Implementing proper SEO for local business discovery.</p></div>
+            <div class="tab-panel" data-panel="learnings"><p>Client projects require thinking beyond code — understanding the business, the audience, and the brand story. Production deployment and SEO are real-world skills that go beyond development.</p></div>
+          </div>
+        </article>
+
+        <!-- CodeSphere -->
+        <article class="card project-card reveal fade-up" style="--delay:110ms">
+          <div class="project-head">
+            <div>
+              <span class="live-badge">LIVE</span>
+              <h3>CodeSphere: Complete CS Knowledge Hub</h3>
+            </div>
+            <div class="project-links">
+              <a href="https://codesphere-hub.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Live Demo</a>
+              <a href="https://github.com/CodeWithRupanjali/-CodeSphere" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+            </div>
+          </div>
+          <p>CodeSphere is a complete Computer Science learning platform built to give any CS student everything they need in one place — structured tutorials, domains, concepts, roadmaps, and career guidance — instead of jumping between many scattered sites. Free, no ads, no paywalls, no login required.</p>
+          <ul class="feature-list">
+            <li>Chapter-by-chapter tutorials for 12 programming languages with Try-it editors</li>
+            <li>8 core CS domains in depth (DSA, Web, Mobile, Databases, Security, AI/ML &amp; more)</li>
+            <li>Universal concepts explained side-by-side across languages</li>
+            <li>Visual learning roadmaps · Skill quiz · 50+ glossary terms</li>
+            <li>Client-side XP, badges &amp; chapter progress tracking</li>
+            <li>Career guidance · Owner guide with PDF download</li>
+          </ul>
+          <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Vercel</span><span>EdTech</span><span>CS Learning</span></div>
+          <div class="project-tabs" role="tablist">
+            <button type="button" class="tab-btn active" data-tab="overview">Overview</button>
+            <button type="button" class="tab-btn" data-tab="problem">Problem</button>
+            <button type="button" class="tab-btn" data-tab="solution">Solution</button>
+            <button type="button" class="tab-btn" data-tab="challenges">Challenges</button>
+            <button type="button" class="tab-btn" data-tab="learnings">Learnings</button>
+          </div>
+          <div class="tab-panels">
+            <div class="tab-panel active" data-panel="overview"><p>CodeSphere is a structured CS knowledge hub — 12 languages, 8 domains, 12 core concepts, and career resources — designed so students can learn from zero to industry-aware foundations without paywalls or account friction. Progress and badges run entirely client-side.</p></div>
+            <div class="tab-panel" data-panel="problem"><p>CS students waste time hopping across disconnected tutorials, roadmaps, and career blogs. Learning becomes scattered, demotivating, and hard to track — especially for beginners who need a clear path.</p></div>
+            <div class="tab-panel" data-panel="solution"><p>Built a single hub with language tracks, domain guides, cross-language concept comparisons, visual roadmaps, a skill quiz, glossary, and lightweight progress — all free and accessible without login, deployed on Vercel.</p></div>
+            <div class="tab-panel" data-panel="challenges"><p>Organizing large multi-topic content without overwhelm. Keeping navigation clear across languages and domains. Delivering progress and XP without a backend. Ensuring performance and clarity on mobile screens.</p></div>
+            <div class="tab-panel" data-panel="learnings"><p>Information architecture matters as much as visuals for learning products. Client-side progress can feel personal without accounts. Shipping a broad platform teaches prioritization: structure first, polish continuously.</p></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <p class="section-label reveal fade-up">Offerings</p>
+        <h2 class="section-title reveal fade-up">Services</h2>
+        <p class="section-desc reveal fade-up">What I can build for you — based on my skills, tools, and live project experience. Share your requirement and let’s shape it together.</p>
+        <div class="services-grid">
+          <article class="card service-card reveal fade-up">
+            <span class="service-num">01</span>
+            <h3>Custom Website Development</h3>
+            <p>Business, personal, and portfolio websites built clean, responsive, and ready to go live — tailored to your brand and goals.</p>
+          </article>
+          <article class="card service-card reveal fade-up" style="--delay:55ms">
+            <span class="service-num">02</span>
+            <h3>Landing Pages</h3>
+            <p>Focused, high-converting pages for products, startups, events, or campaigns — clear message, strong visuals, fast load.</p>
+          </article>
+          <article class="card service-card reveal fade-up" style="--delay:110ms">
+            <span class="service-num">03</span>
+            <h3>Frontend UI</h3>
+            <p>Modern, responsive interfaces with polished layouts, smooth interactions, and a consistent look across mobile and desktop.</p>
+          </article>
+          <article class="card service-card reveal fade-up" style="--delay:165ms">
+            <span class="service-num">04</span>
+            <h3>Full-Stack Web Apps</h3>
+            <p>Multi-page applications with forms, dashboards, and interactive flows — structured for real use, not just demos.</p>
+          </article>
+          <article class="card service-card reveal fade-up" style="--delay:220ms">
+            <span class="service-num">05</span>
+            <h3>AI Web Tools</h3>
+            <p>Smart browser-based features using AI APIs and on-device intelligence — practical tools that feel modern and useful.</p>
+          </article>
+          <article class="card service-card reveal fade-up" style="--delay:275ms">
+            <span class="service-num">06</span>
+            <h3>E-commerce / Shop Sites</h3>
+            <p>Product listing and shop-style websites with clear browsing, cart-ready structure, and a smooth shopping experience.</p>
+          </article>
+        </div>
+        <div class="services-cta reveal fade-up" style="--delay:320ms">
+          <p>Have a requirement in mind? Tell me what you want to build.</p>
+          <a href="#contact" class="btn btn-primary">Discuss Your Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section id="philosophy" class="section">
+      <div class="container philosophy-grid">
+        <div>
+          <p class="section-label reveal fade-up">Approach</p>
+          <h2 class="section-title reveal fade-up">Learning Philosophy</h2>
+          <div class="reveal fade-up">
+            <p>I believe that learning to code is less about memorizing syntax and more about developing a specific way of thinking. The best developers are not the ones who know the most APIs — they are the ones who can break down a problem clearly, reason through solutions systematically, and communicate their thinking effectively.</p>
+            <p>My approach is deliberately structured. I do not jump from tutorial to tutorial chasing novelty. I pick a topic, go deep enough to understand it properly, apply it in a real project, then move forward. Projects I build are not decorative — they are how I verify that I actually understood something.</p>
+            <blockquote>“Build something. Break it. Understand why it broke. Build it better. Repeat.”</blockquote>
+            <p>I also believe in documentation and reflection. Writing things down forces clarity that passive learning never produces. If you cannot explain it simply, you do not understand it yet.</p>
+          </div>
+        </div>
+        <div class="pillar-grid">
+          <div class="card pillar reveal fade-up"><span>01</span><h4>Build to Learn</h4><p>Tutorials teach concepts. Projects build competence. Every meaningful thing I have learned came from applying knowledge to something I actually built.</p></div>
+          <div class="card pillar reveal fade-up" style="--delay:55ms"><span>02</span><h4>Go Deep Before Going Wide</h4><p>Surface-level knowledge of ten things is less useful than genuine understanding of three. I spend real time with each technology.</p></div>
+          <div class="card pillar reveal fade-up" style="--delay:110ms"><span>03</span><h4>Learn in Public</h4><p>Sharing work on GitHub and through projects creates accountability and invites feedback. There is no faster way to identify gaps.</p></div>
+          <div class="card pillar reveal fade-up" style="--delay:165ms"><span>04</span><h4>Embrace the Uncomfortable</h4><p>If I am comfortable, I am not learning anymore. Growth happens just beyond my current level — then I figure it out.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section section-alt">
+      <div class="container">
+        <p class="section-label reveal fade-up">Method</p>
+        <h2 class="section-title reveal fade-up">My Development Process</h2>
+        <div class="process-grid">
+          <div class="card process-step reveal fade-up"><span class="step-num">01</span><h3>Understand the Problem</h3><p>Before writing a line of code, clearly define what problem is being solved, who it affects, and what success looks like.</p></div>
+          <div class="card process-step reveal fade-up" style="--delay:55ms"><span class="step-num">02</span><h3>Plan the Structure</h3><p>Sketch the architecture, decide on the tech stack, break the project into manageable phases.</p></div>
+          <div class="card process-step reveal fade-up" style="--delay:110ms"><span class="step-num">03</span><h3>Build Iteratively</h3><p>Build in small, working increments — committing frequently, testing regularly, validating each feature.</p></div>
+          <div class="card process-step reveal fade-up" style="--delay:165ms"><span class="step-num">04</span><h3>Test &amp; Refine</h3><p>Test across devices, browsers, and edge cases. Look at the product as a user, not just a developer.</p></div>
+          <div class="card process-step reveal fade-up" style="--delay:220ms"><span class="step-num">05</span><h3>Ship &amp; Reflect</h3><p>Deploy, document, and review: what went well, what to do differently, and what was learned.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section id="values" class="section">
+      <div class="container">
+        <p class="section-label reveal fade-up">Principles</p>
+        <h2 class="section-title reveal fade-up">Core Values</h2>
+        <div class="values-grid">
+          <div class="card value-card reveal fade-up"><h4>Purposeful Building</h4><p>Everything I build should have a reason to exist. The best software solves a real problem for real people.</p></div>
+          <div class="card value-card reveal fade-up" style="--delay:40ms"><h4>Intellectual Honesty</h4><p>I believe in saying “I do not know yet” and then going to find out.</p></div>
+          <div class="card value-card reveal fade-up" style="--delay:80ms"><h4>Continuous Growth</h4><p>Committed to being a better engineer tomorrow than today — through consistent learning.</p></div>
+          <div class="card value-card reveal fade-up" style="--delay:120ms"><h4>Collaborative Spirit</h4><p>Great software is built by people who communicate well and share knowledge freely.</p></div>
+          <div class="card value-card reveal fade-up" style="--delay:160ms"><h4>User Trust</h4><p>I care about privacy, reliability, and building products users can genuinely trust.</p></div>
+          <div class="card value-card reveal fade-up" style="--delay:200ms"><h4>Bias Toward Action</h4><p>I have learned more from imperfect projects that shipped than from perfect plans that stayed in a notebook.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION -->
+    <section id="vision" class="section section-alt">
+      <div class="container vision-grid">
+        <div>
+          <p class="section-label reveal fade-up">Future</p>
+          <h2 class="section-title reveal fade-up">Career Vision</h2>
+          <div class="reveal fade-up">
+            <p>My vision is clear: I want to become a Software Engineer who builds products that matter. Not just functional products — but products that are thoughtfully designed, technically sound, and genuinely useful to the people who use them.</p>
+            <p>Technology is one of the most powerful tools humanity has created, and I feel a deep responsibility to use it well. I do not want to build software just because I can — I want to build it because it solves a real problem, improves someone's workflow, or creates an experience that simply did not exist before.</p>
+          </div>
+          <div class="vision-highlights reveal fade-up" style="--delay:80ms">
+            <div class="vision-box card">
+              <span class="vision-label">Direction</span>
+              <h4>Useful over flashy</h4>
+              <p>Prioritize products that solve real problems and earn people’s trust.</p>
+            </div>
+            <div class="vision-box card">
+              <span class="vision-label">Focus Track</span>
+              <h4>Web · AI · Systems</h4>
+              <p>Grow across frontend craft, practical AI, and stronger engineering depth.</p>
+            </div>
+            <div class="vision-box card">
+              <span class="vision-label">Working Style</span>
+              <h4>Ship, learn, refine</h4>
+              <p>Build iteratively, document clearly, and improve with every release.</p>
+            </div>
+          </div>
+        </div>
+        <div class="goal-list">
+          <div class="card goal reveal fade-up"><span>Near-Term</span><h4>Master the Fundamentals</h4><p>Deepen JavaScript skills, strengthen CS fundamentals, and build more complex projects.</p></div>
+          <div class="card goal reveal fade-up" style="--delay:55ms"><span>Mid-Term</span><h4>Ship Meaningful Products</h4><p>Build and launch products solving real problems, expanding into backend and AI capabilities.</p></div>
+          <div class="card goal reveal fade-up" style="--delay:110ms"><span>Mid-Term</span><h4>Contribute to Open Source</h4><p>Give back by contributing to open-source projects and writing technical content.</p></div>
+          <div class="card goal reveal fade-up" style="--delay:165ms"><span>Long-Term</span><h4>AI-Integrated Engineering</h4><p>Combine strong software engineering foundations with practical ML integration.</p></div>
+          <div class="card goal reveal fade-up" style="--delay:220ms"><span>Always</span><h4>Keep Learning</h4><p>Staying curious and committed to continuous learning is a permanent professional posture.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section id="roadmap" class="section">
+      <div class="container">
+        <p class="section-label reveal fade-up">Growth</p>
+        <h2 class="section-title reveal fade-up">Learning Roadmap</h2>
+        <div class="roadmap-grid">
+          <div class="card roadmap-card done reveal fade-up">
+            <h3>✓ Foundation Phase</h3>
+            <p class="phase-tag">Completed</p>
+            <ul>
+              <li>C Programming fundamentals</li>
+              <li>HTML5 &amp; CSS3 core skills</li>
+              <li>JavaScript essentials</li>
+              <li>Responsive web design</li>
+              <li>Java programming (certified)</li>
+              <li>Git &amp; GitHub version control</li>
+              <li>4 live projects deployed</li>
+              <li>8 professional certifications</li>
+              <li>AI fundamentals (Level 1)</li>
+            </ul>
+          </div>
+          <div class="card roadmap-card progress reveal fade-up" style="--delay:55ms">
+            <h3>● Growth Phase</h3>
+            <p class="phase-tag">In Progress</p>
+            <ul>
+              <li>Advanced JavaScript (ES6+, async/await)</li>
+              <li>Python for scripting &amp; automation</li>
+              <li>Data structures &amp; algorithms deep dive</li>
+              <li>Browser APIs &amp; Web standards</li>
+              <li>Expanding AI integration skills</li>
+              <li>Open source contribution preparation</li>
+            </ul>
+          </div>
+          <div class="card roadmap-card next reveal fade-up" style="--delay:110ms">
+            <h3>○ Expansion Phase</h3>
+            <p class="phase-tag">Coming Next</p>
+            <ul>
+              <li>React.js framework</li>
+              <li>Node.js &amp; backend fundamentals</li>
+              <li>Database design (SQL &amp; NoSQL)</li>
+              <li>REST API design &amp; integration</li>
+              <li>Python ML/AI libraries</li>
+              <li>Full-stack project (end-to-end)</li>
+              <li>Open source contributions</li>
+              <li>Technical writing &amp; documentation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section section-alt">
+      <div class="container">
+        <p class="section-label reveal fade-up">Background</p>
+        <h2 class="section-title reveal fade-up">Education</h2>
+        <div class="card education-card reveal fade-up">
+          <h3>Computer Science</h3>
+          <p>My academic background is in Computer Science — a field that does not just teach programming languages, but fundamentally reshapes how you think about problems. The curriculum provides grounding in software development, algorithms, data structures, computational theory, and modern computing technologies.</p>
+          <p>Beyond formal coursework, I have invested heavily in self-directed learning through 8 professional certifications, 4 live deployed projects, and continuous exploration of technologies at the edge of what I currently know. A CS education is a starting point, not a destination.</p>
+          <p>I am committed to developing both the technical depth and professional maturity that a career in software engineering demands — combining academic foundations with real-world application, one project at a time.</p>
+          <div class="tags"><span>Software Development</span><span>Data Structures</span><span>Algorithms</span><span>Web Technologies</span><span>Programming Fundamentals</span><span>AI &amp; Emerging Tech</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <p class="section-label reveal fade-up">Feedback</p>
+        <h2 class="section-title reveal fade-up">Testimonials</h2>
+        <div class="testimonial-grid">
+          <blockquote class="card testimonial reveal fade-up">
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p>“Demonstrates strong curiosity, dedication, and a genuine passion for learning modern technologies. What stands out is not just the technical progress, but the depth of engagement — always asking the right questions and pushing to understand the reasoning behind concepts, not just the mechanics.”</p>
+            <footer>— Faculty Member, Computer Science</footer>
+          </blockquote>
+          <blockquote class="card testimonial reveal fade-up" style="--delay:55ms">
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p>“A collaborative learner with excellent problem-solving abilities and a genuinely positive growth mindset. Rupanjali brings both energy and focus to group work — the kind of person who makes the whole team better by staying curious, asking good questions, and following through on commitments.”</p>
+            <footer>— Peer Colleague, Group Project</footer>
+          </blockquote>
+          <blockquote class="card testimonial reveal fade-up" style="--delay:110ms">
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+            <p>“Shows a clear commitment toward continuous improvement and building impactful technical solutions. The ability to identify a problem, design a solution, and actually ship it — as demonstrated across live projects — is a rare quality. The trajectory here is genuinely impressive.”</p>
+            <footer>— Mentor, Technical Mentorship</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-alt">
+      <div class="container">
+        <p class="section-label reveal fade-up">Answers</p>
+        <h2 class="section-title reveal fade-up">Professional FAQ</h2>
+        <div class="faq-grid">
+          <div class="faq-item reveal fade-up">
+            <button type="button" class="faq-q" aria-expanded="false">What kind of opportunities are you looking for?<span class="chevron" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>I am open to internships, project collaborations, open-source contributions, and entry-level software engineering opportunities. I am particularly interested in web development and front-end roles, though eager to grow across the full stack.</p></div>
+          </div>
+          <div class="faq-item reveal fade-up" style="--delay:40ms">
+            <button type="button" class="faq-q" aria-expanded="false">What programming languages are you most comfortable with?<span class="chevron" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>My primary working language is JavaScript. I have foundational knowledge in C and Java (certified). I am currently building Python proficiency for scripting and data-related work.</p></div>
+          </div>
+          <div class="faq-item reveal fade-up" style="--delay:80ms">
+            <button type="button" class="faq-q" aria-expanded="false">Are you available for freelance or collaborative projects?<span class="chevron" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>Yes — I am genuinely interested in collaborative projects, especially where I can contribute meaningfully and continue learning. I have already delivered Sugar &amp; Slate Patisserie as a client-style project.</p></div>
+          </div>
+          <div class="faq-item reveal fade-up" style="--delay:120ms">
+            <button type="button" class="faq-q" aria-expanded="false">How do you approach learning something new?<span class="chevron" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>I start with the “why,” build a working mental model through structured resources, then apply it in a real project. Writing things down forces clarity that passive consumption never produces.</p></div>
+          </div>
+          <div class="faq-item reveal fade-up" style="--delay:160ms">
+            <button type="button" class="faq-q" aria-expanded="false">Do you have experience working on real projects?<span class="chevron" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>Yes — four live deployed projects: VisionIQ, ShopEasy, Sugar &amp; Slate Patisserie, and CodeSphere. Each required different skills and solved a different kind of problem.</p></div>
+          </div>
+          <div class="faq-item reveal fade-up" style="--delay:200ms">
+            <button type="button" class="faq-q" aria-expanded="false">What makes VisionIQ different from other AI tools?<span class="chevron" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>Privacy. VisionIQ runs all AI inference directly in the browser — nothing ever leaves the device. It also provides session-level mood tracking and summary analytics.</p></div>
+          </div>
+          <div class="faq-item reveal fade-up" style="--delay:240ms">
+            <button type="button" class="faq-q" aria-expanded="false">What is your most technically challenging project?<span class="chevron" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>VisionIQ — integrating client-side AI with real-time webcam access, async model loading, cross-browser permissions, and mood analytics simultaneously was the most complex challenge I have shipped. CodeSphere was a different kind of challenge: structuring large learning content clearly.</p></div>
+          </div>
+          <div class="faq-item reveal fade-up" style="--delay:280ms">
+            <button type="button" class="faq-q" aria-expanded="false">How can I reach you for collaboration or feedback?<span class="chevron" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>Email at <a href="mailto:rupanjalikumari264@gmail.com">rupanjalikumari264@gmail.com</a> or LinkedIn at <a href="https://linkedin.com/in/codewithrupanjali" target="_blank" rel="noopener noreferrer">linkedin.com/in/codewithrupanjali</a>. I respond within 24–48 hours.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="cta-banner reveal fade-up">
+          <h2>Ready to Build Something Together?</h2>
+          <p>Whether you have a project in mind, an opportunity to share, or simply want to connect with a fellow technologist — I would love to hear from you.</p>
+          <div class="hero-actions">
+            <a href="mailto:rupanjalikumari264@gmail.com" class="btn btn-primary">Send an Email</a>
+            <a href="https://linkedin.com/in/codewithrupanjali" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Connect on LinkedIn</a>
+          </div>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <p class="section-label reveal fade-up">Contact</p>
+            <h2 class="section-title reveal fade-up">Let's Connect</h2>
+            <p class="reveal fade-up">Reach out for internships, collaborations, or a conversation about building thoughtful software.</p>
+            <div class="contact-cards">
+              <a class="card contact-card reveal fade-up" href="mailto:rupanjalikumari264@gmail.com">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </span>
+                <div>
+                  <strong>Email</strong>
+                  <span>rupanjalikumari264@gmail.com</span>
+                </div>
+              </a>
+              <a class="card contact-card reveal fade-up" style="--delay:55ms" href="https://github.com/CodeWithRupanjali" target="_blank" rel="noopener noreferrer">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.1 3.29 9.42 7.86 10.95.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.25 5.67.42.37.8 1.1.8 2.22 0 1.6-.01 2.89-.01 3.28 0 .31.21.68.8.56A10.53 10.53 0 0 0 23.5 12C23.5 5.74 18.27.5 12 .5z"/></svg>
+                </span>
+                <div>
+                  <strong>GitHub</strong>
+                  <span>github.com/CodeWithRupanjali</span>
+                </div>
+              </a>
+              <a class="card contact-card reveal fade-up" style="--delay:110ms" href="https://linkedin.com/in/codewithrupanjali" target="_blank" rel="noopener noreferrer">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.23 0z"/></svg>
+                </span>
+                <div>
+                  <strong>LinkedIn</strong>
+                  <span>linkedin.com/in/codewithrupanjali</span>
+                </div>
+              </a>
+            </div>
+            <p class="availability reveal fade-up"><span class="status-dot"></span> Currently available for internships, collaborations, and entry-level opportunities</p>
+          </div>
+          <form class="card contact-form reveal fade-up" id="contactForm" action="https://formsubmit.co/ajax/rupanjalikumari264@gmail.com" method="POST">
+            <input type="hidden" name="_subject" id="formSubject" value="New message from CodeWithRupanjali portfolio" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <p class="form-status" id="formStatus" role="status" aria-live="polite" hidden></p>
+            <label>Name<input type="text" name="name" required placeholder="Your name" autocomplete="name" /></label>
+            <label>Email<input type="email" name="email" required placeholder="you@example.com" autocomplete="email" /></label>
+            <label>Subject<input type="text" name="subject" required placeholder="What's this about?" /></label>
+            <label>Message<textarea name="message" rows="5" required placeholder="Tell me a bit more..."></textarea></label>
+            <button type="submit" class="btn btn-primary" id="contactSubmit">Send Message</button>
+            <p class="form-note">Messages go to <strong>rupanjalikumari264@gmail.com</strong>. First time: open the FormSubmit confirmation email in Gmail and click <strong>Activate Form</strong> — after that every message arrives in your inbox.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.jpg" alt="CodeWithRupanjali" width="48" height="48" class="footer-logo" />
+        <div>
+          <strong>Rupanjali Kumari</strong>
+          <span>@CodeWithRupanjali</span>
+          <p>Building the future through technology, learning, and innovation. One commit at a time.</p>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a href="https://linkedin.com/in/codewithrupanjali" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://github.com/CodeWithRupanjali" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+        <a href="mailto:rupanjalikumari264@gmail.com" aria-label="Email">Email</a>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#journey">Journey</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#vision">Vision</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#education">Education</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="copyright">© 2026 Rupanjali Kumari. All Rights Reserved. | CodeWithRupanjali</p>
+    </div>
+  </footer>
+
+  <button type="button" class="back-top" id="backTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
