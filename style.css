@@ -2185,12 +2185,12 @@ blockquote {
   }
 
   .hero-portrait-stage {
-    width: min(100%, 520px);
+    width: min(100%, 420px);
     margin-inline: auto;
   }
 
   .portrait-wrap {
-    width: min(100%, 480px);
+    width: min(100%, 380px);
     max-width: 100%;
     margin-inline: auto;
   }
@@ -2270,7 +2270,7 @@ blockquote {
   }
 
   .portrait-wrap {
-    width: 100%;
+    width: min(100%, 340px);
   }
 
   .hero-portrait {
@@ -2623,32 +2623,8 @@ blockquote {
     padding: 72px 0;
   }
 
-  .hero-aside {
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: calc(50% - 50vw);
-    overflow: hidden;
-  }
-
-  .hero-portrait-stage {
-    width: 100%;
-  }
-
-  .portrait-wrap {
-    width: 100%;
-    height: min(42vh, 340px);
-    overflow: hidden;
-  }
-
   .hero-portrait {
-    /* Same height — moderate zoom reduces PNG side padding, stays natural */
-    width: 168%;
-    max-width: none;
-    height: 100%;
-    max-height: none;
-    margin-left: -34%;
-    object-fit: cover;
-    object-position: center 10%;
+    max-height: min(42vh, 340px);
   }
 
   .hero-copy {
@@ -2669,31 +2645,8 @@ blockquote {
     padding-top: calc(var(--nav-h) + 12px);
   }
 
-  .hero-aside {
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: calc(50% - 50vw);
-    overflow: hidden;
-  }
-
-  .hero-portrait-stage {
-    width: 100%;
-  }
-
-  .portrait-wrap {
-    width: 100%;
-    height: min(38vh, 300px);
-    overflow: hidden;
-  }
-
   .hero-portrait {
-    width: 172%;
-    max-width: none;
-    height: 100%;
-    max-height: none;
-    margin-left: -36%;
-    object-fit: cover;
-    object-position: center 10%;
+    max-height: min(38vh, 300px);
   }
 
   .hero-actions {
