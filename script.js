@@ -147,6 +147,7 @@
     reveals.forEach((el) => revObs.observe(el));
     revealInView();
     window.addEventListener("resize", revealInView, { passive: true });
+    window.addEventListener("scroll", revealInView, { passive: true });
   } else {
     reveals.forEach((el) => el.classList.add("visible"));
   }

@@ -2100,20 +2100,28 @@ blockquote {
   .nav-links.open {
     display: flex;
     position: fixed;
-    inset: calc(var(--nav-h) + 6px) 14px auto 14px;
-    max-height: calc(100vh - var(--nav-h) - 20px);
-    background: linear-gradient(180deg, rgba(7, 14, 26, 0.96), rgba(3, 6, 13, 0.94));
-    backdrop-filter: blur(24px) saturate(150%);
+    top: calc(var(--nav-h) + 6px);
+    left: 14px;
+    right: 14px;
+    bottom: max(14px, env(safe-area-inset-bottom, 0px));
+    max-height: none;
+    background: #070e1a;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     flex-direction: column;
     align-items: stretch;
     padding: 14px;
+    padding-bottom: max(14px, env(safe-area-inset-bottom, 0px));
     gap: 6px;
+    overflow-x: hidden;
     overflow-y: auto;
-    z-index: 999;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    z-index: 1100;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow:
-      0 24px 50px rgba(0, 0, 0, 0.38),
+      0 24px 50px rgba(0, 0, 0, 0.55),
       inset 0 1px 0 rgba(255, 255, 255, 0.04);
   }
 
@@ -2121,6 +2129,7 @@ blockquote {
     font-size: 1rem;
     padding: 14px 16px;
     border-radius: 14px;
+    flex-shrink: 0;
   }
 
   .nav-mobile-cta {
@@ -2348,6 +2357,12 @@ blockquote {
   transform: none;
 }
 
+/* Hero must paint immediately — no blank first frame waiting on JS */
+.hero .reveal {
+  opacity: 1;
+  transform: none;
+}
+
 /* Filter creates a clipping box that chops Alkalami ascenders */
 .hero-name.reveal,
 .hero-name.reveal.visible,
@@ -2548,11 +2563,9 @@ blockquote {
 
 @keyframes menuEnter {
   from {
-    opacity: 0;
-    transform: translateY(-8px);
+    transform: translateY(-6px);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
   }
 }
