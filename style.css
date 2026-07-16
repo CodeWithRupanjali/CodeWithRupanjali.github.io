@@ -2623,8 +2623,13 @@ blockquote {
     padding: 72px 0;
   }
 
+  .portrait-wrap {
+    width: min(94%, 460px);
+    margin-inline: auto;
+  }
+
   .hero-portrait {
-    max-height: min(42vh, 340px);
+    max-height: min(52vh, 440px);
   }
 
   .hero-copy {
@@ -2645,8 +2650,13 @@ blockquote {
     padding-top: calc(var(--nav-h) + 12px);
   }
 
+  .portrait-wrap {
+    width: min(92%, 420px);
+    margin-inline: auto;
+  }
+
   .hero-portrait {
-    max-height: min(38vh, 300px);
+    max-height: min(48vh, 400px);
   }
 
   .hero-actions {
