@@ -921,18 +921,55 @@ body::before {
   border-bottom: 1.5px solid rgba(0, 180, 255, 0.55);
 }
 
-.identity-logo {
+.identity-logo-wrap {
+  position: relative;
+  z-index: 1;
   width: clamp(104px, 12vw, 136px);
   height: clamp(104px, 12vw, 136px);
+  margin-bottom: 30px;
+  display: grid;
+  place-items: center;
+}
+
+/* Signal Orbit — cyan sweep continuously travels around the R logo */
+.identity-orbit {
+  position: absolute;
+  inset: -9px;
+  border-radius: 28px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 255deg,
+    rgba(0, 180, 255, 0.08) 285deg,
+    rgba(0, 180, 255, 0.55) 315deg,
+    #7ddcff 338deg,
+    transparent 360deg
+  );
+  animation: identitySignalOrbit 2.8s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0 0 10px rgba(0, 180, 255, 0.35));
+}
+
+.identity-orbit::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 25px;
+  background: linear-gradient(165deg, #0c1a2c 0%, #071018 100%);
+}
+
+.identity-logo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   display: block;
   border-radius: 20px;
-  margin-bottom: 28px;
   box-shadow:
     0 12px 36px rgba(0, 0, 0, 0.4),
     0 0 28px rgba(0, 180, 255, 0.18);
-  position: relative;
-  z-index: 1;
 }
 
 .identity-bio {
@@ -941,12 +978,12 @@ body::before {
   width: 100%;
   max-width: 48ch;
   margin: 0 auto 30px;
-  font-family: var(--font-body);
-  font-size: clamp(1.1rem, 1.5vw, 1.32rem);
+  font-family: var(--font-head);
+  font-size: clamp(1.05rem, 1.4vw, 1.22rem);
   font-weight: 400;
-  line-height: 1.62;
-  letter-spacing: 0.01em;
-  color: rgba(220, 232, 244, 0.94);
+  line-height: 1.68;
+  letter-spacing: 0.015em;
+  color: rgba(210, 226, 240, 0.9);
 }
 
 .identity-pillars {
@@ -1001,6 +1038,12 @@ body::before {
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes identitySignalOrbit {
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -2760,15 +2803,28 @@ blockquote {
     padding: 30px 22px;
   }
 
-  .identity-logo {
+  .identity-logo-wrap {
     width: 88px;
     height: 88px;
     margin-bottom: 18px;
   }
 
+  .identity-orbit {
+    inset: -7px;
+    border-radius: 22px;
+  }
+
+  .identity-orbit::before {
+    border-radius: 19px;
+  }
+
+  .identity-logo {
+    border-radius: 16px;
+  }
+
   .identity-bio {
-    font-size: 0.92rem;
-    line-height: 1.68;
+    font-size: 0.9rem;
+    line-height: 1.65;
     margin-bottom: 16px;
   }
 
@@ -2805,16 +2861,28 @@ blockquote {
     border-radius: 24px;
   }
 
-  .identity-logo {
+  .identity-logo-wrap {
     width: 80px;
     height: 80px;
     margin-bottom: 16px;
-    border-radius: 16px;
+  }
+
+  .identity-orbit {
+    inset: -6px;
+    border-radius: 20px;
+  }
+
+  .identity-orbit::before {
+    border-radius: 17px;
+  }
+
+  .identity-logo {
+    border-radius: 14px;
   }
 
   .identity-bio {
-    font-size: 0.88rem;
-    line-height: 1.65;
+    font-size: 0.86rem;
+    line-height: 1.62;
     max-width: 30ch;
   }
 
@@ -2876,6 +2944,7 @@ blockquote {
   .hero-particle,
   .identity-glow,
   .identity-panel,
+  .identity-orbit,
   .typed-cursor,
   .timeline-dot {
     animation: none !important;
