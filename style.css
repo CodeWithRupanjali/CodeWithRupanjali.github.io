@@ -818,7 +818,7 @@ body::before {
 
 .hero-identity {
   position: relative;
-  width: min(100%, 460px);
+  width: min(100%, 540px);
   display: grid;
   place-items: center;
   isolation: isolate;
@@ -826,7 +826,7 @@ body::before {
 
 .identity-glow {
   position: absolute;
-  inset: 8% 4%;
+  inset: 6% 2%;
   border-radius: 50%;
   background: radial-gradient(
     circle,
@@ -842,7 +842,7 @@ body::before {
 
 .identity-aura {
   position: absolute;
-  inset: 4% 0;
+  inset: 2% 0;
   z-index: 0;
   pointer-events: none;
   background:
@@ -867,11 +867,13 @@ body::before {
 .identity-panel {
   position: relative;
   z-index: 2;
-  width: min(100%, 380px);
-  padding: clamp(36px, 5vw, 52px) clamp(28px, 4vw, 40px);
+  width: min(100%, 520px);
+  min-height: min(62vh, 580px);
+  padding: clamp(42px, 4.5vw, 58px) clamp(36px, 4vw, 52px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   border-radius: 28px;
   background:
@@ -920,12 +922,12 @@ body::before {
 }
 
 .identity-logo {
-  width: clamp(88px, 18vw, 120px);
-  height: clamp(88px, 18vw, 120px);
+  width: clamp(104px, 12vw, 136px);
+  height: clamp(104px, 12vw, 136px);
   object-fit: contain;
   display: block;
-  border-radius: 18px;
-  margin-bottom: 22px;
+  border-radius: 20px;
+  margin-bottom: 28px;
   box-shadow:
     0 12px 36px rgba(0, 0, 0, 0.4),
     0 0 28px rgba(0, 180, 255, 0.18);
@@ -933,40 +935,37 @@ body::before {
   z-index: 1;
 }
 
-.identity-brand {
+.identity-bio {
   position: relative;
   z-index: 1;
-  font-family: var(--font-head);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 10px;
-}
-
-.identity-name {
-  position: relative;
-  z-index: 1;
-  font-family: var(--font-hero);
-  font-size: clamp(1.55rem, 3.2vw, 2.05rem);
+  width: 100%;
+  max-width: 48ch;
+  margin: 0 auto 30px;
+  font-family: var(--font-body);
+  font-size: clamp(1.1rem, 1.5vw, 1.32rem);
   font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
-  color: #fff;
-  margin-bottom: 12px;
+  line-height: 1.62;
+  letter-spacing: 0.01em;
+  color: rgba(220, 232, 244, 0.94);
 }
 
-.identity-role {
+.identity-pillars {
   position: relative;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
   font-family: var(--font-head);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #9fdfff;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 420px;
 }
 
 .identity-motto {
@@ -976,17 +975,17 @@ body::before {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 8px 10px;
+  gap: 8px 14px;
   font-family: var(--font-head);
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.78);
-  padding-top: 18px;
-  border-top: 1px solid rgba(0, 180, 255, 0.16);
+  color: rgba(255, 255, 255, 0.88);
+  padding-top: 24px;
+  border-top: 1px solid rgba(0, 180, 255, 0.18);
   width: 100%;
-  max-width: 280px;
+  max-width: 360px;
 }
 
 .identity-dot {
@@ -2307,6 +2306,11 @@ blockquote {
     margin-inline: auto;
   }
 
+  .identity-panel {
+    min-height: 0;
+    width: min(100%, 380px);
+  }
+
   .hero-radial {
     right: -22%;
     width: min(520px, 92vw);
@@ -2379,6 +2383,25 @@ blockquote {
 
   .hero-identity {
     width: min(92%, 360px);
+  }
+
+  .identity-panel {
+    min-height: 0;
+    padding: 32px 24px;
+  }
+
+  .identity-bio {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 34ch;
+    margin-bottom: 18px;
+  }
+
+  .identity-pillars {
+    font-size: 0.64rem;
+    letter-spacing: 0.1em;
+    gap: 6px 8px;
+    margin-bottom: 16px;
   }
 
   .hero-aside {
@@ -2733,11 +2756,25 @@ blockquote {
   }
 
   .identity-panel {
-    padding: 34px 24px;
+    min-height: 0;
+    padding: 30px 22px;
   }
 
-  .identity-name {
-    font-size: clamp(1.4rem, 6.5vw, 1.75rem);
+  .identity-logo {
+    width: 88px;
+    height: 88px;
+    margin-bottom: 18px;
+  }
+
+  .identity-bio {
+    font-size: 0.92rem;
+    line-height: 1.68;
+    margin-bottom: 16px;
+  }
+
+  .identity-pillars {
+    font-size: 0.62rem;
+    margin-bottom: 14px;
   }
 
   .hero-copy {
@@ -2763,20 +2800,36 @@ blockquote {
   }
 
   .identity-panel {
-    padding: 30px 20px;
+    min-height: 0;
+    padding: 26px 18px;
     border-radius: 24px;
   }
 
   .identity-logo {
-    width: 84px;
-    height: 84px;
-    margin-bottom: 18px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+  }
+
+  .identity-bio {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    max-width: 30ch;
+  }
+
+  .identity-pillars {
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    gap: 5px 6px;
   }
 
   .identity-motto {
     font-size: 0.64rem;
     letter-spacing: 0.12em;
     gap: 6px 8px;
+    padding-top: 16px;
+    max-width: 260px;
   }
 
   .hero-actions {
