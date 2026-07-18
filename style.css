@@ -818,7 +818,7 @@ body::before {
 
 .hero-identity {
   position: relative;
-  width: min(100%, 540px);
+  width: min(100%, 460px);
   display: grid;
   place-items: center;
   isolation: isolate;
@@ -867,34 +867,65 @@ body::before {
 .identity-panel {
   position: relative;
   z-index: 2;
-  width: min(100%, 520px);
-  min-height: min(62vh, 580px);
-  padding: clamp(42px, 4.5vw, 58px) clamp(36px, 4vw, 52px);
+  width: min(100%, 420px);
+  min-height: min(52vh, 500px);
+  padding: clamp(34px, 3.8vw, 46px) clamp(28px, 3.4vw, 40px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-radius: 28px;
+  border-radius: 26px;
   background:
     linear-gradient(165deg, rgba(12, 26, 44, 0.92) 0%, rgba(5, 12, 24, 0.9) 55%, rgba(3, 8, 18, 0.94) 100%);
-  border: 1px solid rgba(0, 180, 255, 0.3);
+  border: 1px solid rgba(0, 180, 255, 0.28);
   box-shadow:
-    0 28px 70px rgba(0, 0, 0, 0.5),
-    0 0 50px rgba(0, 180, 255, 0.14),
+    0 24px 60px rgba(0, 0, 0, 0.48),
+    0 0 42px rgba(0, 180, 255, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.08),
-    inset 0 0 40px rgba(0, 180, 255, 0.04);
+    inset 0 0 36px rgba(0, 180, 255, 0.04);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   animation: identityEnter 0.9s var(--ease) both;
   overflow: hidden;
 }
 
+/* Edge Sweep — thin cyan light travels the four sides, then loops */
+.identity-edge {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  pointer-events: none;
+  z-index: 5;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 268deg,
+    rgba(0, 180, 255, 0.12) 292deg,
+    rgba(76, 201, 255, 0.75) 318deg,
+    #b8efff 336deg,
+    rgba(0, 180, 255, 0.2) 348deg,
+    transparent 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation:
+    identityEdgeSweep 3.6s linear infinite,
+    identityEdgePulse 1.8s ease-in-out infinite;
+}
+
 .identity-panel::before {
   content: "";
   position: absolute;
   inset: 12px;
-  border-radius: 20px;
+  border-radius: 18px;
   border: 1px solid rgba(0, 180, 255, 0.1);
   pointer-events: none;
 }
@@ -924,9 +955,9 @@ body::before {
 .identity-logo-wrap {
   position: relative;
   z-index: 1;
-  width: clamp(104px, 12vw, 136px);
-  height: clamp(104px, 12vw, 136px);
-  margin-bottom: 30px;
+  width: clamp(92px, 10.5vw, 118px);
+  height: clamp(92px, 10.5vw, 118px);
+  margin-bottom: 24px;
   display: grid;
   place-items: center;
 }
@@ -976,14 +1007,14 @@ body::before {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 48ch;
-  margin: 0 auto 30px;
-  font-family: var(--font-head);
-  font-size: clamp(1.05rem, 1.4vw, 1.22rem);
-  font-weight: 400;
-  line-height: 1.68;
-  letter-spacing: 0.015em;
-  color: rgba(210, 226, 240, 0.9);
+  max-width: 36ch;
+  margin: 0 auto 26px;
+  font-family: var(--font-hero);
+  font-size: clamp(1.05rem, 1.55vw, 1.35rem);
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  color: var(--text-muted);
 }
 
 .identity-pillars {
@@ -1044,6 +1075,23 @@ body::before {
 @keyframes identitySignalOrbit {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes identityEdgeSweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes identityEdgePulse {
+  0%, 100% {
+    opacity: 0.5;
+    filter: drop-shadow(0 0 3px rgba(0, 180, 255, 0.25));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(76, 201, 255, 0.55));
   }
 }
 
@@ -2434,10 +2482,11 @@ blockquote {
   }
 
   .identity-bio {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    max-width: 34ch;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    max-width: 32ch;
     margin-bottom: 18px;
+    letter-spacing: -0.01em;
   }
 
   .identity-pillars {
@@ -2823,8 +2872,8 @@ blockquote {
   }
 
   .identity-bio {
-    font-size: 0.9rem;
-    line-height: 1.65;
+    font-size: 0.92rem;
+    line-height: 1.5;
     margin-bottom: 16px;
   }
 
@@ -2881,9 +2930,9 @@ blockquote {
   }
 
   .identity-bio {
-    font-size: 0.86rem;
-    line-height: 1.62;
-    max-width: 30ch;
+    font-size: 0.88rem;
+    line-height: 1.48;
+    max-width: 28ch;
   }
 
   .identity-pillars {
@@ -2945,6 +2994,7 @@ blockquote {
   .identity-glow,
   .identity-panel,
   .identity-orbit,
+  .identity-edge,
   .typed-cursor,
   .timeline-dot {
     animation: none !important;
