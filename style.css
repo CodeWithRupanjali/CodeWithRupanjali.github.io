@@ -816,29 +816,47 @@ body::before {
   min-height: min(68vh, 640px);
 }
 
-.hero-brandmark {
+.hero-identity {
   position: relative;
-  width: min(100%, 520px);
-  aspect-ratio: 1;
+  width: min(100%, 460px);
   display: grid;
   place-items: center;
   isolation: isolate;
 }
 
-.brandmark-glow {
+.identity-glow {
   position: absolute;
-  inset: 12%;
+  inset: 8% 4%;
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(0, 180, 255, 0.28) 0%,
+    rgba(0, 180, 255, 0.26) 0%,
     rgba(0, 120, 200, 0.1) 42%,
     transparent 72%
   );
-  filter: blur(36px);
+  filter: blur(40px);
   z-index: 0;
   pointer-events: none;
   animation: glowBreathe 8s ease-in-out infinite;
+}
+
+.identity-aura {
+  position: absolute;
+  inset: 4% 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, transparent 0%, rgba(0, 180, 255, 0.05) 48%, transparent 100%),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 22px,
+      rgba(0, 180, 255, 0.035) 22px,
+      rgba(0, 180, 255, 0.035) 23px
+    );
+  mask-image: radial-gradient(circle at center, black 28%, transparent 78%);
+  -webkit-mask-image: radial-gradient(circle at center, black 28%, transparent 78%);
+  opacity: 0.7;
 }
 
 @keyframes glowBreathe {
@@ -846,141 +864,144 @@ body::before {
   50% { opacity: 1; }
 }
 
-.brandmark-ring {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.brandmark-ring--outer {
-  inset: 6%;
-  border: 1px solid rgba(0, 180, 255, 0.18);
-  box-shadow:
-    inset 0 0 40px rgba(0, 180, 255, 0.06),
-    0 0 48px rgba(0, 180, 255, 0.08);
-  animation: brandmarkSpin 48s linear infinite;
-}
-
-.brandmark-ring--inner {
-  inset: 18%;
-  border: 1px dashed rgba(0, 180, 255, 0.22);
-  animation: brandmarkSpin 36s linear infinite reverse;
-}
-
-.brandmark-core {
+.identity-panel {
   position: relative;
   z-index: 2;
+  width: min(100%, 380px);
+  padding: clamp(36px, 5vw, 52px) clamp(28px, 4vw, 40px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  width: min(72%, 300px);
-  padding: 28px 20px;
   border-radius: 28px;
-  background: linear-gradient(160deg, rgba(10, 24, 42, 0.92), rgba(4, 10, 22, 0.88));
-  border: 1px solid rgba(0, 180, 255, 0.28);
+  background:
+    linear-gradient(165deg, rgba(12, 26, 44, 0.92) 0%, rgba(5, 12, 24, 0.9) 55%, rgba(3, 8, 18, 0.94) 100%);
+  border: 1px solid rgba(0, 180, 255, 0.3);
   box-shadow:
-    0 24px 60px rgba(0, 0, 0, 0.45),
-    0 0 40px rgba(0, 180, 255, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  animation: brandmarkEnter 0.9s var(--ease) both;
+    0 28px 70px rgba(0, 0, 0, 0.5),
+    0 0 50px rgba(0, 180, 255, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 40px rgba(0, 180, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  animation: identityEnter 0.9s var(--ease) both;
+  overflow: hidden;
 }
 
-.brandmark-letter {
-  font-family: var(--font-hero);
-  font-size: clamp(5.2rem, 12vw, 7.4rem);
-  line-height: 0.9;
-  letter-spacing: -0.04em;
-  color: #7ddcff;
-  text-shadow:
-    0 0 28px rgba(0, 180, 255, 0.55),
-    0 8px 30px rgba(0, 0, 0, 0.45);
-}
-
-.brandmark-tag {
-  margin-top: 10px;
-  font-family: var(--font-head);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.brandmark-line {
-  margin-top: 8px;
-  font-size: 0.86rem;
-  color: var(--text-muted);
-  letter-spacing: 0.01em;
-}
-
-.brandmark-orbit {
+.identity-panel::before {
+  content: "";
   position: absolute;
-  inset: 0;
-  z-index: 3;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  inset: 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 180, 255, 0.1);
   pointer-events: none;
 }
 
-.brandmark-orbit li {
+.identity-frame {
   position: absolute;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.identity-frame--tl {
+  top: 18px;
+  left: 18px;
+  border-top: 1.5px solid rgba(0, 180, 255, 0.55);
+  border-left: 1.5px solid rgba(0, 180, 255, 0.55);
+}
+
+.identity-frame--br {
+  right: 18px;
+  bottom: 18px;
+  border-right: 1.5px solid rgba(0, 180, 255, 0.55);
+  border-bottom: 1.5px solid rgba(0, 180, 255, 0.55);
+}
+
+.identity-logo {
+  width: clamp(88px, 18vw, 120px);
+  height: clamp(88px, 18vw, 120px);
+  object-fit: contain;
+  display: block;
+  border-radius: 18px;
+  margin-bottom: 22px;
+  box-shadow:
+    0 12px 36px rgba(0, 0, 0, 0.4),
+    0 0 28px rgba(0, 180, 255, 0.18);
+  position: relative;
+  z-index: 1;
+}
+
+.identity-brand {
+  position: relative;
+  z-index: 1;
   font-family: var(--font-head);
   font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.identity-name {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-hero);
+  font-size: clamp(1.55rem, 3.2vw, 2.05rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.identity-role {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #9fdfff;
-  padding: 8px 12px;
-  border: 1px solid rgba(0, 180, 255, 0.22);
-  border-radius: 10px;
-  background: rgba(5, 14, 28, 0.78);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+  margin-bottom: 22px;
 }
 
-.brandmark-orbit li:nth-child(1) {
-  top: 11%;
-  left: 50%;
-  transform: translateX(-50%);
+.identity-motto {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  font-family: var(--font-head);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 180, 255, 0.16);
+  width: 100%;
+  max-width: 280px;
 }
 
-.brandmark-orbit li:nth-child(2) {
-  top: 50%;
-  right: 2%;
-  transform: translateY(-50%);
+.identity-dot {
+  color: var(--accent);
+  opacity: 0.85;
 }
 
-.brandmark-orbit li:nth-child(3) {
-  bottom: 11%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.brandmark-orbit li:nth-child(4) {
-  top: 50%;
-  left: 2%;
-  transform: translateY(-50%);
-}
-
-@keyframes brandmarkEnter {
+@keyframes identityEnter {
   from {
-    opacity: 0.35;
-    transform: translate3d(0, 12px, 0) scale(0.98);
+    opacity: 0.4;
+    transform: translate3d(0, 14px, 0) scale(0.985);
   }
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(1);
-  }
-}
-
-@keyframes brandmarkSpin {
-  to {
-    transform: rotate(360deg);
   }
 }
 
@@ -2281,7 +2302,7 @@ blockquote {
     overflow: hidden;
   }
 
-  .hero-brandmark {
+  .hero-identity {
     width: min(92%, 400px);
     margin-inline: auto;
   }
@@ -2356,8 +2377,8 @@ blockquote {
     grid-template-columns: 1fr;
   }
 
-  .hero-brandmark {
-    width: min(88%, 360px);
+  .hero-identity {
+    width: min(92%, 360px);
   }
 
   .hero-aside {
@@ -2664,14 +2685,13 @@ blockquote {
   .card,
   .btn-outline,
   .back-top,
-  .brandmark-core {
+  .identity-panel {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
   }
 
   .hero-ambient .orb,
-  .brandmark-glow,
-  .brandmark-ring,
+  .identity-glow,
   .timeline-dot {
     animation: none;
   }
@@ -2708,17 +2728,16 @@ blockquote {
     padding: 72px 0;
   }
 
-  .hero-brandmark {
-    width: min(90%, 340px);
+  .hero-identity {
+    width: min(94%, 340px);
   }
 
-  .brandmark-letter {
-    font-size: clamp(4.4rem, 22vw, 5.8rem);
+  .identity-panel {
+    padding: 34px 24px;
   }
 
-  .brandmark-orbit li {
-    font-size: 0.66rem;
-    padding: 6px 10px;
+  .identity-name {
+    font-size: clamp(1.4rem, 6.5vw, 1.75rem);
   }
 
   .hero-copy {
@@ -2739,18 +2758,25 @@ blockquote {
     padding-top: calc(var(--nav-h) + 12px);
   }
 
-  .hero-brandmark {
-    width: min(92%, 300px);
+  .hero-identity {
+    width: min(96%, 320px);
   }
 
-  .brandmark-core {
-    width: min(78%, 240px);
-    padding: 22px 16px;
-    border-radius: 22px;
+  .identity-panel {
+    padding: 30px 20px;
+    border-radius: 24px;
   }
 
-  .brandmark-line {
-    font-size: 0.78rem;
+  .identity-logo {
+    width: 84px;
+    height: 84px;
+    margin-bottom: 18px;
+  }
+
+  .identity-motto {
+    font-size: 0.64rem;
+    letter-spacing: 0.12em;
+    gap: 6px 8px;
   }
 
   .hero-actions {
@@ -2795,16 +2821,15 @@ blockquote {
   .marquee-track,
   .hero-ambient .orb,
   .hero-particle,
-  .brandmark-glow,
-  .brandmark-ring,
-  .brandmark-core,
+  .identity-glow,
+  .identity-panel,
   .typed-cursor,
   .timeline-dot {
     animation: none !important;
     transition: none !important;
   }
   .reveal,
-  .brandmark-core {
+  .identity-panel {
     opacity: 1;
     filter: none;
     transform: none;
